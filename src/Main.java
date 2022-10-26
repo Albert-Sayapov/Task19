@@ -30,11 +30,10 @@ public class Main {
         queue.addAll(generateClients());
 
         while (!queue.isEmpty()) {
-            if (!queue.peek().delTicket()) {
-                queue.remove();
-            } else {
-                System.out.println(queue.poll());
-                queue.addAll(generateClients());
+            Person persons = queue.poll();
+            if (persons.delTicket()) {
+                System.out.println(persons);
+                queue.add(persons);
             }
         }
     }

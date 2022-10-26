@@ -12,7 +12,7 @@ public class Person {
     }
 
     public boolean delTicket() {
-        if (this.ticket != 0) {
+        if (this.ticket > 0) {
             this.ticket -= 1;
             return true;
         } else {
