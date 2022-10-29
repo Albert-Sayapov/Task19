@@ -11,6 +11,10 @@ public class Person {
         this.ticket = ticket;
     }
 
+    public int getTicket() {
+        return this.ticket;
+    }
+
     public boolean delTicket() {
         if (this.ticket > 0) {
             this.ticket -= 1;
